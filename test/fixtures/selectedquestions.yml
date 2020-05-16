@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  answered: false
+  answered_c: false
+  answered_w: false
+
+two:
+  answered: false
+  answered_c: false
+  answered_w: false

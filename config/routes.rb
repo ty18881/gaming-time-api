@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :selectedquestions
+  resources :questions
+  resources :games
   resources :parents
   resources :progressreports
   resources :users

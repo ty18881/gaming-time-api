@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_203701) do
+ActiveRecord::Schema.define(version: 2020_05_16_205423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.date "date"
+    t.integer "num_correct"
+    t.integer "num_wrong"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "progressreport_id"
+    t.index ["progressreport_id"], name: "index_games_on_progressreport_id"
+  end
 
   create_table "parents", force: :cascade do |t|
     t.string "name"
@@ -31,6 +42,24 @@ ActiveRecord::Schema.define(version: 2020_05_16_203701) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_progressreports_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "operator"
+    t.integer "operand1"
+    t.integer "operand2"
+    t.integer "answer"
+    t.integer "point_value"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "selectedquestions", force: :cascade do |t|
+    t.boolean "answered"
+    t.boolean "answered_c"
+    t.boolean "answered_w"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
