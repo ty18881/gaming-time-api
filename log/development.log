@@ -130,3 +130,40 @@ Migrating to AddForeignKeyToSelectedQuestion (20200516205814)
   [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("operator", "operand1", "operand2", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["operator", "x"], ["operand1", 4], ["operand2", 5], ["created_at", "2020-05-16 21:23:36.096923"], ["updated_at", "2020-05-16 21:23:36.096923"]]
   [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions"[0m
+Started GET "/users" for ::1 at 2020-05-17 19:54:09 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 7.0ms | Allocations: 6791)
+
+
+Started GET "/users" for ::1 at 2020-05-17 20:10:26 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 1072)
+
+
+Started GET "/users" for ::1 at 2020-05-17 20:13:09 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 961)
+
+
+Started GET "/users" for ::1 at 2020-05-17 20:14:48 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 4.4ms | Allocations: 6792)
+
+
+Started GET "/users" for ::1 at 2020-05-17 20:14:53 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 964)
+
+
