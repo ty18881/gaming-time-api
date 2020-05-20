@@ -1,0 +1,2 @@
+class ProgressReportMailer < ApplicationMailer
+end

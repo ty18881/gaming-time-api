@@ -18,6 +18,10 @@ class ParentsController < ApplicationController
     @parent = Parent.new(parent_params)
 
     if @parent.save
+      WelcomeMailer.with(user: @parent).welcome_email.deliver_now
+ 
+        format.html { redirect_to(@parent, notice: 'Parent record was successfully created.') }
+        format.json { render json: @parents, status: :created, location: @parents }
       render json: @parent, status: :created, location: @parent
     else
       render json: @parent.errors, status: :unprocessable_entity
