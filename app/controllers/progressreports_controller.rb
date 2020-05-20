@@ -46,6 +46,6 @@ class ProgressreportsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def progressreport_params
-      params.require(:progressreport).permit(:date, :time_earned)
+      params.require(:progressreport).permit(:date, :time_earned, :user_id)
     end
 end
