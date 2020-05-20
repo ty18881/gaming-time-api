@@ -15,10 +15,33 @@ class ProgressreportsController < ApplicationController
 
   # POST /progressreports
   def create
-    @progressreport = Progressreport.new(progressreport_params)
+    # this will save the progress report and corresponding game at the same time.
+    # @progressreport = Progressreport.new(progressreport_params)
+
+    @progressreport = Progressreport.new
+    @progressreport.date = params[:progressreport][:date]
+    @progressreport.time_earned = params[:progressreport][:time_earned]
+    @progressreport.user_id = params[:progressreport][:user_id]
+
 
     if @progressreport.save
-      render json: @progressreport, status: :created, location: @progressreport
+      # now it is save to create the underlying game object in the database
+      puts 'Progress Report Saved - Now saving the game.'
+      @game = Game.new
+      @game.date = params[:progressreport][:date]
+      @game.num_correct = params[:progressreport][:num_correct]
+      @game.num_wrong = params[:progressreport][:num_wrong]
+      @game.status ='complete'
+      @game.progressreport_id = @progressreport.id
+      
+      if @game.save
+        
+        render json: @progressreport, status: :created, location: @progressreport
+        puts 'Created the progress report and game record in the database'
+      else
+        render json: @game.error, status: unprocessable_entity
+      end
+
     else
       render json: @progressreport.errors, status: :unprocessable_entity
     end
@@ -46,6 +69,6 @@ class ProgressreportsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def progressreport_params
-      params.require(:progressreport).permit(:date, :time_earned, :user_id)
+      params.require(:progressreport).permit(:date, :time_earned, :user_id, :num_correct, :num_wrong)
     end
 end

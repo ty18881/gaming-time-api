@@ -6040,3 +6040,255 @@ Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.2ms | Allocations: 1686
 Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 2396)
 
 
+Started GET "/users" for ::1 at 2020-05-19 20:37:22 -0400
+Started GET "/questions" for ::1 at 2020-05-19 20:37:22 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 8.3ms | Allocations: 1189)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:37:23 -0400
+Processing by UsersController#index as */*
+Processing by QuestionsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mQuestion Load (3.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 22.5ms | ActiveRecord: 3.6ms | Allocations: 2045)
+
+
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.8ms | Allocations: 2604)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:37:23 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.2ms | Allocations: 1320)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:39:41 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 944)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:39:41 -0400
+Processing by QuestionsController#index as */*
+Started GET "/users" for ::1 at 2020-05-19 20:39:41 -0400
+  [1m[36mQuestion Load (1.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Processing by UsersController#index as */*
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.9ms | Allocations: 2109)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.3ms | Allocations: 1303)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:39:41 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 1320)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:43:56 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 945)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:43:57 -0400
+Started GET "/users" for ::1 at 2020-05-19 20:43:57 -0400
+Processing by QuestionsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 2085)
+
+
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.6ms | Allocations: 2336)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:43:57 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1320)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:44:33 -0400
+Started GET "/questions" for ::1 at 2020-05-19 20:44:33 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by QuestionsController#index as */*
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1650)
+
+
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 1.6ms | Allocations: 2047)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:44:33 -0400
+Processing by UsersController#index as */*
+Started GET "/questions" for ::1 at 2020-05-19 20:44:33 -0400
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by QuestionsController#index as */*
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 1.0ms | Allocations: 1844)
+
+
+  [1m[36mQuestion Load (9.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 9.7ms | Allocations: 1745)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:49:10 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 944)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:49:10 -0400
+Started GET "/users" for ::1 at 2020-05-19 20:49:10 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 1908)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.7ms | Allocations: 1301)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:49:10 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1320)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:50:26 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1079)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:50:26 -0400
+Processing by QuestionsController#index as */*
+Started GET "/users" for ::1 at 2020-05-19 20:50:26 -0400
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1538)
+
+
+Processing by UsersController#index as */*
+Started GET "/questions" for ::1 at 2020-05-19 20:50:26 -0400
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Processing by QuestionsController#index as */*
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.7ms | Allocations: 1851)
+
+
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms | Allocations: 1537)
+
+
+Started GET "/users" for ::1 at 2020-05-19 20:55:07 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/questions" for ::1 at 2020-05-19 20:55:07 -0400
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Processing by QuestionsController#index as */*
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.5ms | Allocations: 1868)
+
+
+  [1m[36mQuestion Load (2.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Started GET "/users" for ::1 at 2020-05-19 20:55:08 -0400
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 2.2ms | Allocations: 1839)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 1121)
+
+
+Started GET "/questions" for ::1 at 2020-05-19 20:55:08 -0400
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1320)
+
+
+Started POST "/progressreports" for ::1 at 2020-05-19 21:09:43 -0400
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgressreportsController#create as */*
+  Parameters: {"progressreport"=>{"date"=>"2020-05-19", "time_earned"=>"15", "user_id"=>"1", "num_correct"=>"4", "num_wrong"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[36mProgressreport Create (2.2ms)[0m  [1m[32mINSERT INTO "progressreports" ("date", "time_earned", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2020-05-19"], ["time_earned", 15], ["created_at", "2020-05-20 01:09:43.539189"], ["updated_at", "2020-05-20 01:09:43.539189"], ["user_id", 1]]
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+  [1m[36mProgressreport Load (0.8ms)[0m  [1m[34mSELECT "progressreports".* FROM "progressreports" WHERE "progressreports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 27.6ms | Allocations: 24190)
+
+
+  
+TypeError (can't cast Array):
+  
+app/controllers/progressreports_controller.rb:37:in `create'
+Started POST "/progressreports" for ::1 at 2020-05-19 21:13:24 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgressreportsController#create as */*
+  Parameters: {"progressreport"=>{"date"=>"2020-05-19", "time_earned"=>"15", "user_id"=>"1", "num_correct"=>"4", "num_wrong"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[36mProgressreport Create (0.9ms)[0m  [1m[32mINSERT INTO "progressreports" ("date", "time_earned", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2020-05-19"], ["time_earned", 15], ["created_at", "2020-05-20 01:13:24.612338"], ["updated_at", "2020-05-20 01:13:24.612338"], ["user_id", 1]]
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/progressreports_controller.rb:27:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+  [1m[36mProgressreport Load (0.5ms)[0m  [1m[34mSELECT "progressreports".* FROM "progressreports" WHERE "progressreports"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+  [1m[36mGame Create (7.6ms)[0m  [1m[32mINSERT INTO "games" ("date", "num_correct", "num_wrong", "status", "created_at", "updated_at", "progressreport_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", "2020-05-19"], ["num_correct", 4], ["num_wrong", 0], ["status", "complete"], ["created_at", "2020-05-20 01:13:24.645290"], ["updated_at", "2020-05-20 01:13:24.645290"], ["progressreport_id", 4]]
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/progressreports_controller.rb:37:in `create'
+Completed 201 Created in 93ms (Views: 0.7ms | ActiveRecord: 32.9ms | Allocations: 25024)
+
+
+Started GET "/games" for ::1 at 2020-05-19 21:13:43 -0400
+Processing by GamesController#index as */*
+  Parameters: {"progressreport"=>{"date"=>"2020-05-19", "time_earned"=>"15", "user_id"=>"1", "num_correct"=>"4", "num_wrong"=>"0"}}
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1039)
+
+
