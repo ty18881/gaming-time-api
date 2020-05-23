@@ -2,6 +2,7 @@ class WelcomeMailer < ApplicationMailer
     default from: 'ty18881@yahoo.com'
 
     def welcome_email
+        puts 'Inside Welcome Mailer'
         @parent = params[:parent]
         @url = 'http://localhost:3001'
         email_with_name = %("#{@parent.name}" <#{@parent.email}>)

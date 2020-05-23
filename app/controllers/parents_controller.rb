@@ -1,4 +1,5 @@
 class ParentsController < ApplicationController
+    
   before_action :set_parent, only: [:show, :update, :destroy]
 
   # GET /parents
@@ -17,14 +18,17 @@ class ParentsController < ApplicationController
   def create
     @parent = Parent.new(parent_params)
 
+    respond_to do |format|
     if @parent.save
-      WelcomeMailer.with(user: @parent).welcome_email.deliver_now
+      
+        WelcomeMailer.with(parent: @parent).welcome_email.deliver_now
  
         format.html { redirect_to(@parent, notice: 'Parent record was successfully created.') }
-        format.json { render json: @parents, status: :created, location: @parents }
-      render json: @parent, status: :created, location: @parent
-    else
-      render json: @parent.errors, status: :unprocessable_entity
+        format.json { render json: @parent, status: :created, location: @parent }
+        render json: @parent, status: :created, location: @parent
+      else
+        render json: @parent.errors, status: :unprocessable_entity
+      end
     end
   end
 
@@ -50,6 +54,6 @@ class ParentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def parent_params
-      params.require(:parent).permit(:name, :email)
+      params.require(:parent).permit(:name, :email, :user_id)
     end
 end
