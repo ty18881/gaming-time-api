@@ -28,13 +28,18 @@ class UsersController < ApplicationController
       # successfully saved the user, now save the companion record
 
       @parent = Parent.new
-      @parent.name = params[:user][:parentName]
-      @parent.email = params[:user][:parentEmail]
+      @parent.name = params[:parentName]
+      @parent.email = params[:parentEmail]
       @parent.user_id = @user.id
 
+      puts 'Echo the parent information before we try to save'
+      puts @parent.name
+      puts @parent.email
+     
+
       if @parent.save
-        render json: @parent, status: :created, location: @parent
-        # render json: @user, status: :created, location: @user
+        # render json: @parent, status: :created, location: @parent
+        render json: @user, status: :created, location: @user
       else
         render json: @parent.errors, status: :unprocessable_entity
       end
