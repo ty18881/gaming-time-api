@@ -35,6 +35,7 @@ class ProgressreportsController < ApplicationController
       @game.progressreport_id = @progressreport.id
       
       if @game.save
+        ## generate progress report email here.
         
         render json: @progressreport, status: :created, location: @progressreport
         puts 'Created the progress report and game record in the database'

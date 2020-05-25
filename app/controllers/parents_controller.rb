@@ -16,20 +16,22 @@ class ParentsController < ApplicationController
 
   # POST /parents
   def create
+
     @parent = Parent.new(parent_params)
 
-    respond_to do |format|
     if @parent.save
       
-        WelcomeMailer.with(parent: @parent).welcome_email.deliver_now
- 
-        format.html { redirect_to(@parent, notice: 'Parent record was successfully created.') }
-        format.json { render json: @parent, status: :created, location: @parent }
-        render json: @parent, status: :created, location: @parent
-      else
+        # WelcomeMailer.with(parent: @parent).welcome_email.deliver_now
+        WelcomeMailer.welcome_email(@parent).deliver_now
+        respond_to do |format|
+          format.html { redirect_to(@parent, notice: 'Parent record was successfully created.') }
+          # format.json { render json: @parent, status: :created, location: @parent }
+          render json: @parent, status: :created, location: @parent
+        end
+    else
         render json: @parent.errors, status: :unprocessable_entity
-      end
     end
+   
   end
 
   # PATCH/PUT /parents/1

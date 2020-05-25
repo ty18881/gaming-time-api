@@ -1,24 +1,40 @@
-# README
+# Kids, earn more gaming time here!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# SEIR-FLEX-123  Project Number Five - May 2020
+This project allows a child to earn more time for gaming by answering math questions.
 
-Things you may want to cover:
+The primary user is a kid who is subject to parental controls or other limits on their screen time.
+This application allows them to earn more time by answering questions and fires off an email to their parent
+when specific thresholds are reached.
 
-* Ruby version
+## My "Teach yourself something new" project elements are React Hooks, Context API and React Router
 
-* System dependencies
+## This project utilizes the following technologies under the hood:
+- React
+- Ruby on Rails
+- React Hooks and Context API
+- React Router
+- Postgresql
+- React Bootstrap
 
-* Configuration
 
-* Database creation
+## The application URL
+TBD
 
-* Database initialization
+## Future Refinements
+- Implement 'Restart Game' option
+- Leverage useReducer Hook to streamline use of context.
+- Implement user authentication.
 
-* How to run the test suite
+## Defects / "Would be better if" Items
+- useEffect causing interesting loop when loading questions from the database.
+- UserContext not setting currentUser value in state as expected.
+- GameOver method should display player stats for the current session.
+- Automatically render the next question once the user submits their answer
 
-* Services (job queues, cache servers, search engines, etc.)
+## Trello Board
+https://trello.com/b/KKdsfhuF/earn-more-time
 
-* Deployment instructions
+## Wireframes and Product Brief
 
-* ...
+- placeholder
