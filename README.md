@@ -24,6 +24,7 @@ when specific thresholds are reached.
 
 ## The application URL
 TBD
+- API: https://gaming-time-api.herokuapp.com
 
 ## Future Refinements
 - Implement 'Restart Game' option
